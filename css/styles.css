@@ -281,6 +281,9 @@ footer {
 }
 .closing-button {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 8px;
     right: 8px;
     width: 30px;
@@ -290,6 +293,7 @@ footer {
 }
 .closing-button svg {
     fill: #000;
+
 }
 .fixed-back .is-active {
     opacity: 0;
