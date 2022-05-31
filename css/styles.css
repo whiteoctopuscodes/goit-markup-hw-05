@@ -39,6 +39,7 @@ header {
     width: 100%;
     height: 80px;
     background-color: #fff;
+    z-index: 10;
 }
 header a {
     display: block;
@@ -63,7 +64,17 @@ header a {
     
 }
 .nav-link {
+    position: relative;
     margin-right: 50px;
+}
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--hover-focus-color);
+    opacity: 0;
 }
 .nav-link:last-child {
     margin-right: 0;
@@ -76,11 +87,13 @@ header a {
     padding: 32px 0;
 }
 
-.nav-link a:hover{
-    color: var(--hover-focus-color);
-}
+.nav-link a:hover,
 .nav-link a:focus{
     color: var(--hover-focus-color);
+}
+.nav-link:hover::before,
+.nav-link:focus::before {
+    opacity: 1;
 }
 .header-contacts {
     display: flex;
@@ -608,7 +621,37 @@ footer {
 .portfolio-group {
     padding: 20px 24px;
 }
- 
+
+/*PHOTO_TEXT*/
+.image-hover {
+    position: relative;
+    
+}
+
+.image-p {
+    position: absolute;
+    padding-top: 63px;
+    padding-left: 24px;
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    left: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: white;
+    
+    font-size: 18px;
+    line-height: 1.55;
+
+    letter-spacing: 0.03em;
+    opacity: 0;
+}
+.image-hover:hover p{
+    bottom: 0;
+    opacity: 1;
+}
+.image-hover:hover {
+
+}
  .portfolio-image {
 }
 .description {
