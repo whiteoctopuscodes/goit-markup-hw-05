@@ -45,14 +45,14 @@
         <section class="section hero">
             <div class="container">
             <h1>Эффективные решения для вашего бизнеса</h1>
-            <button type="button">Заказать услугу</button>
-            <div class="fixed-back is-active">
-                <div class="modal">
-                    <div class="closing-button">
+            <button class="toorder " type="button" data-modal-open>Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal" >
+                    <button class="closing-button" data-modal-close>
                         <svg width="11px" height="11px">
                             <use href="./images/icon.svg#closingbutton"></use>
                         </svg>
-                    </div>
+                    </button>
                 </div>
             </div>
         </div>
@@ -428,7 +428,9 @@
         </div>
         </div>
     </footer>
-    
+
+    <script src="./js/modal.js"></script>
+
 </body>
 
 </html>
