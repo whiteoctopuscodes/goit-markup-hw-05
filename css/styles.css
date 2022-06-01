@@ -67,14 +67,17 @@ header a {
     position: relative;
     margin-right: 50px;
 }
-.nav-link::before {
+.current:after {
     content: "";
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 4px;
     background-color: var(--hover-focus-color);
-    opacity: 0;
+    opacity: 1;
+}
+.current a {
+    color: var(--hover-focus-color);
 }
 .nav-link:last-child {
     margin-right: 0;
@@ -92,10 +95,6 @@ header a {
 .nav-link a:hover,
 .nav-link a:focus{
     color: var(--hover-focus-color);
-}
-.nav-link:hover::before,
-.nav-link:focus::before {
-    opacity: 1;
 }
 .header-contacts {
     display: flex;
@@ -251,12 +250,15 @@ footer {
 
 .hero {
     text-align: center;
+    position: relative;
     padding-top: 200px;
     padding-bottom: 200px;
+    overflow: hidden;
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/herophoto.jpg);
     background-repeat: no-repeat;
     background-position: center;
 }
+
 
 .hero h1{
     font-weight: 900;
