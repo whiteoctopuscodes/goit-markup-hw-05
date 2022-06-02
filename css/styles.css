@@ -250,6 +250,8 @@ footer {
 /*HERO*/
 
 .hero {
+    max-width: 1600px;
+    margin: 0 auto;
     text-align: center;
     position: relative;
     padding-top: 200px;
@@ -594,7 +596,8 @@ footer {
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.categories-button:hover {
+.categories-button:hover,
+.categories-button:focus {
     background: var(--hover-focus-color);
     color: #FFFFFF;
 }
